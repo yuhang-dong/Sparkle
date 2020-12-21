@@ -9,7 +9,7 @@ class SparkleHeader extends React.Component {
             <div className="container">
                 <div className="header_wrapper">
                     <div className="title">
-                        <h1>V2EX</h1>
+                        <h1><a href="/">Sparkle</a></h1>
                         <div className="search">
                             <Input type="text" className="search_input" prefix={<SearchOutlined/>}/>
                         </div>

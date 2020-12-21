@@ -1,6 +1,7 @@
 import React from 'react';
 import './SparkleMain.scss'
-import SparkleNews from '../SparkleNews'
+import SparkleNews from '../SparkleNews/SparkleNews'
+import SparkleRandList from "../SparkleNavs/SparkleRandList/SparkleRandList";
 import {Card} from "antd";
 
 class SparkleMain extends React.Component {
@@ -14,7 +15,7 @@ class SparkleMain extends React.Component {
                     </div>
 
                     <div className="right">
-                        <Card className="card"></Card>
+                        <SparkleRandList className="card"></SparkleRandList>
                         <Card className="card"></Card>
                         <Card className="card"></Card>
                         <Card className="card"></Card>

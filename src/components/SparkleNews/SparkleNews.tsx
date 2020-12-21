@@ -1,17 +1,15 @@
-// @ts-ignore
 import React from 'react';
 import {Card, Badge} from 'antd'
 import './SparkleNews.scss'
 // @ts-ignore
 import logo from '../../logo.svg'
-// @ts-ignore
 import {getTabs, getGoNodes, getNews} from "../../apis";
-import {GoNodesAndNews, NewsState} from '../../types/index'
+import {GoNodesAndNews, NewsState} from '../../types/mainPage'
 import {DefaultProps} from "../../types/framework";
+import NProgress from 'nprogress'
+import moment from 'moment'
 
-
-
-class SparkleNews extends React.Component {
+class SparkleNews extends React.Component<DefaultProps, any> {
     state: NewsState;
     constructor(props: DefaultProps) {
         super(props);
@@ -33,7 +31,7 @@ class SparkleNews extends React.Component {
         })
 
         const news = this.state.news.map((nnew, index) => {
-            return <div key={index} className="new">
+            return <div key={index} className="new topper" >
                 <div className="left">
                     <div className="avatar">
                         <img src={logo} alt="#"/>
@@ -45,7 +43,7 @@ class SparkleNews extends React.Component {
                         <div className="desc">
                             <span className="topic">{nnew.go}</span>
                             <span>{nnew.author}</span>
-                            <span>{React.$moment(parseInt(nnew.time)).fromNow()}</span>
+                            <span>{moment(parseInt(nnew.time)).fromNow()}</span>
                             <span>最后回复来自 <span>{nnew.lastResp}</span></span>
                         </div>
                     </div>
@@ -86,7 +84,7 @@ class SparkleNews extends React.Component {
 
     }
     changeTab(tabId: number): void {
-        React.$nprogress.start();
+        NProgress.start();
         this.getData(tabId).then(data => {
             if(data.goNodesResp.status === 200) {
                 this.setState({
@@ -103,7 +101,7 @@ class SparkleNews extends React.Component {
             this.setState({
                 currentTabId: tabId
             }, () => {
-                React.$nprogress.done();
+                NProgress.done();
             })
         })
 

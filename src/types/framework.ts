@@ -1,3 +1,4 @@
 export interface DefaultProps {
-    className: any
+    className: any,
+    children?: any
 }

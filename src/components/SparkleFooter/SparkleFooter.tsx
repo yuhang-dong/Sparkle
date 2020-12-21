@@ -28,6 +28,8 @@ class SparkleFooter extends React.Component {
                     <br/>
                     <span>Do have faith in what you're doing</span>
                 </div>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
             </div>
         </footer>
     }

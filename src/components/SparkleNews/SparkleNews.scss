@@ -13,7 +13,7 @@
       box-sizing: content-box;
       cursor: pointer;
       margin: 0 10px;
-      padding: 2px 5px;
+      padding: 4px 5px;
       color: #333344;
     }
 
@@ -43,7 +43,7 @@
       justify-content: space-between;
       align-items: center;
       padding-right: 15px;
-      border-top: 1px solid black;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
       .left {
         display: flex;
         align-items: center;
@@ -76,12 +76,33 @@
               line-height: 12px;
               padding: 4px
             }
+
+            span {
+              padding: 2px 4px;
+            }
           }
         }
       }
       .tail {
         flex: none;
       }
+
     }
+
+
+  }
+}
+
+.topper {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid red;
+    border-left: 20px solid transparent;
   }
 }
