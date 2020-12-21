@@ -1,0 +1,22 @@
+main {
+  background-color: gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .main_wrapper {
+    display: flex;
+
+    .middle {
+      flex-grow: 1;
+      margin-right: 30px;
+    }
+
+    .right {
+      width: 270px;
+      flex: none;
+    }
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}

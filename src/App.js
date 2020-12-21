@@ -1,14 +1,24 @@
-import logo from './logo.svg';
-import V2exHeader from './components/V2exHeader'
+import SparkleHeader from './components/SparkleHeader';
+import SparkleMain from "./components/SparkleMain";
+import SparkleFooter from "./components/SparkleFooter";
 import './App.css';
 import React from "react";
+import './apis/mock'
+import moment from "moment";
+import 'nprogress/nprogress.css'
+import NProgress from 'nprogress'
+
+React.$moment = moment;
+React.$nprogress = NProgress;
 
 function App() {
-  return (
-    <>
-      <V2exHeader/>
-    </>
-  );
+    return (
+        <>
+            <SparkleHeader/>
+            <SparkleMain/>
+            <SparkleFooter/>
+        </>
+    );
 }
 
 export default App;

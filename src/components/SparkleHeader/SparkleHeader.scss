@@ -1,0 +1,42 @@
+header {
+  border-bottom: 1px solid rgba(0,0,0,.22);
+  .header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    .title {
+      display: flex;
+      align-items: center;
+      h1 {
+        font-weight: 800;
+        font-size: 30px;
+        margin: 0;
+      }
+
+      .search {
+        padding: 0 10px;
+        .search_input {
+          border: 1px solid gray;
+          border-radius: 5px;
+          width: 200px;
+          transition: all .3s;
+
+          &.ant-input-affix-wrapper-focused{
+            width: 240px;
+          }
+        }
+      }
+    }
+
+    .opera {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        padding: 0 5px;
+      }
+    }
+  }
+
+}
