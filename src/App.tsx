@@ -6,9 +6,11 @@ import React from "react";
 import './apis/mock'
 import moment from "moment";
 import 'nprogress/nprogress.css'
+// @ts-ignore
 import NProgress from 'nprogress'
-
+// @ts-ignore
 React.$moment = moment;
+// @ts-ignore
 React.$nprogress = NProgress;
 
 function App() {
@@ -20,5 +22,6 @@ function App() {
         </>
     );
 }
+
 
 export default App;

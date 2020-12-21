@@ -1,11 +1,13 @@
+// @ts-ignore
 import Mock from 'mockjs';
+import {TabNode, GoNode, NewNode} from "../../types";
 
 Mock.setup({
     timeout: '200-600'
 })
 
 Mock.mock( /\/api\/v\d+\/tabs/, () => {
-    let ans = [];
+    let ans: TabNode[] = [];
     let len = Mock.Random.integer(5, 20);
     for(let i = 0; i < len; i++) {
         ans.push({
@@ -19,7 +21,7 @@ Mock.mock( /\/api\/v\d+\/tabs/, () => {
 })
 
 Mock.mock( /\/api\/v\d+\/gos\/.*/, () => {
-    let ans = [];
+    let ans: GoNode[] = [];
     let len = Mock.Random.integer(5, 20);
     for(let i = 0; i < len; i++) {
         ans.push({
@@ -32,7 +34,7 @@ Mock.mock( /\/api\/v\d+\/gos\/.*/, () => {
 })
 
 Mock.mock( /\/api\/v\d+\/news\/.*/, () => {
-    let ans = [];
+    let ans:NewNode[] = [];
     let len = Mock.Random.integer(5, 20);
     for(let i = 0; i < len; i++) {
         ans.push({
@@ -41,7 +43,7 @@ Mock.mock( /\/api\/v\d+\/news\/.*/, () => {
             author: Mock.Random.cname(),
             time: Mock.Random.date('T'),
             lastResp: Mock.Random.cname(),
-            resps: Mock.Random.integer(0, 500)
+            respNumber: Mock.Random.integer(0, 500)
         });
     }
 

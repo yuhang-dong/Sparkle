@@ -1,22 +1,30 @@
+// @ts-ignore
 import React from 'react';
 import {Card, Badge} from 'antd'
 import './SparkleNews.scss'
+// @ts-ignore
 import logo from '../../logo.svg'
+// @ts-ignore
 import {getTabs, getGoNodes, getNews} from "../../apis";
+import {GoNodesAndNews, NewsState} from '../../types/index'
+import {DefaultProps} from "../../types/framework";
+
+
 
 class SparkleNews extends React.Component {
-    constructor(props) {
+    state: NewsState;
+    constructor(props: DefaultProps) {
         super(props);
         this.state = {
             tabs: [], // 最上方的切换页
-            currentTabId: null,
+            currentTabId: -1,
             gos: [],
             news: []
         };
         this.changeTab = this.changeTab.bind(this);
     }
     render() {
-        const tabs = this.state.tabs.map((tab, index) => {
+        const tabs: any = this.state.tabs.map((tab, index) => {
             return <span key={index} onClick={() => this.changeTab(tab.tabId)} className={tab.tabId === this.state.currentTabId ? 'current':'' } >{tab.value}</span>
         })
 
@@ -43,7 +51,7 @@ class SparkleNews extends React.Component {
                     </div>
                 </div>
                 <div className="tail">
-                    <Badge count={nnew.resps} style={{ backgroundColor: "lightgray", fontWeight: 'bold', fontSize: '16px' }}></Badge>
+                    <Badge count={nnew.respNumber} style={{backgroundColor: "lightgray", fontWeight: 'bold', fontSize: '16px'}}/>
                 </div>
             </div>
         })
@@ -77,7 +85,7 @@ class SparkleNews extends React.Component {
         })
 
     }
-    changeTab(tabId) {
+    changeTab(tabId: number): void {
         React.$nprogress.start();
         this.getData(tabId).then(data => {
             if(data.goNodesResp.status === 200) {
@@ -101,7 +109,7 @@ class SparkleNews extends React.Component {
 
     }
 
-    async getData(tabId) {
+    async getData(tabId: string | number): Promise<GoNodesAndNews> {
         let goNodesResp = await getGoNodes(tabId);
         let newsResp = await getNews(tabId);
         return {
