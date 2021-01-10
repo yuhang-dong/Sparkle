@@ -1,0 +1,33 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .operator {
+    display: flex;
+    height: 30px;
+    background-color: rgba(0,0,0,0.2);
+    flex: none;
+  }
+
+  .inputer {
+    display: flex;
+    height: calc(100% - 30px);
+    .left {
+      flex: 1 1;
+      width: 0;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .right {
+      flex: 1 1;
+      width: 0;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.1);
+    }
+  }
+
+
+}

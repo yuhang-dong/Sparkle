@@ -1,0 +1,26 @@
+table {
+  border: 2px solid rgba(0,0,0,0.2);
+  thead {
+    border-bottom:2px solid rgba(0,0,0,0.2);
+    th {
+      padding: 2px 5px;
+    }
+    th:not(:last-child) {
+      border-right: 2px solid rgba(0,0,0,0.2);
+    }
+  }
+
+  tbody {
+    tr:not(:last-child) {
+      border-bottom: 2px solid rgba(0,0,0,0.2);
+    }
+
+    td {
+      padding: 2px 5px;
+    }
+
+    td:not(:last-child) {
+      border-right: 2px solid rgba(0,0,0,0.2);
+    }
+  }
+}

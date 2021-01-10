@@ -20,7 +20,8 @@ export interface NewNode {
     author: string,
     time: string,
     lastResp: string,
-    respNumber: number
+    respNumber: number,
+    topper: boolean
 }
 
 export interface NewsState {

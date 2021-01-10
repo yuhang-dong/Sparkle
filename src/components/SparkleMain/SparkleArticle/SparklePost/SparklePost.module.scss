@@ -1,0 +1,28 @@
+.head {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+
+  h1 {
+    margin: 0px;
+  }
+
+  .title {
+    padding-left: 5px;
+  }
+
+  .poster {
+    padding: 10px;
+    img {
+      width: 73px;
+      height: 73px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+  }
+}
+
+.body {
+  padding-left: 5px;
+}
+

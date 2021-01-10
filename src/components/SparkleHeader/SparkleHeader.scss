@@ -1,4 +1,7 @@
 header {
+  a {
+    color: black;
+  }
   border-bottom: 1px solid rgba(0,0,0,.22);
   .header_wrapper {
     display: flex;
@@ -13,9 +16,7 @@ header {
         font-size: 30px;
         margin: 0;
 
-        a {
-          color: black;
-        }
+
       }
 
       .search {

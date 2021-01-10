@@ -1,0 +1,24 @@
+.title {
+  padding-left: 10px;
+  height: 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.comment {
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  .avatar {
+    img {
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+

@@ -1,0 +1,40 @@
+.ud {
+  .head {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  .middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    .block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .newTopic {
+    padding: 10px 5px;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+}

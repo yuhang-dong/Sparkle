@@ -1,10 +1,10 @@
 import React from 'react'
 import {DefaultProps} from "../../../types/framework";
-import {Card} from "antd";
 import srlStyle from './SparkleRankList.module.scss'
 import logo from '../../../logo.svg'
 import {RankListState} from '../../../types/navs/rankList'
 import {getRankList} from "../../../apis";
+import SparkleCard from "../../helper/SparkleCard/SparkleCard";
 
 class SparkleRandList extends React.Component<DefaultProps, any> {
     state: RankListState;
@@ -26,9 +26,12 @@ class SparkleRandList extends React.Component<DefaultProps, any> {
                 </div>
             </div>
         })
-        return <Card className={this.props.className + ` ${srlStyle.srl}`} title={"今日热议主题"}>
+        return <SparkleCard className={this.props.className + ` ${srlStyle.srl}`}>
+            <div className={srlStyle.title}>
+                <h2>今日热议主题</h2>
+            </div>
             {rank}
-        </Card>;
+        </SparkleCard>;
     }
     componentDidMount() {
         getRankList().then(resp => {
