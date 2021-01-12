@@ -10,6 +10,7 @@ import SparkleUserDetailOrLogin from "../SparkleNavs/SparkleUserDetailOrLogin/Sp
 import SparkleArticle from "./SparkleArticle/SparkleArticle";
 import SparkleScrollToTop from "../helper/SparkleScrollToTop";
 import SparkleCreate from "./SparkleCreate/SparkleCreate";
+import SparkleCollectionNodes from "../SparkleNavs/SparkleCollectionNodes/SparkleCollectionNodes";
 
 class SparkleMain extends React.Component {
     render() {
@@ -43,8 +44,8 @@ class SparkleMain extends React.Component {
 
                     <div className="right">
                         <SparkleUserDetailOrLogin/>
+                        <SparkleCollectionNodes/>
                         <SparkleRandList/>
-                        <Card/>
                         <Card/>
                     </div>
                 </div>

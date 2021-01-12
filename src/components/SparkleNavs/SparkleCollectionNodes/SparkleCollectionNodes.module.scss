@@ -1,0 +1,27 @@
+.title {
+  height: 30px;
+  padding: 0px 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  h2 {
+    margin: 0;
+  }
+}
+
+.nodes {
+  position: relative;
+  div {
+    width: 100%;
+    background-color: #fff;
+    height: 30px;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+  }
+
+}
