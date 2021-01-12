@@ -6,6 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import store from './store/store';
 import {Provider} from 'react-redux'
 
+if(navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
+    document.body.ondrop = function(event: DragEvent): void {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+}
+
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
