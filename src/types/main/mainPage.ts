@@ -4,6 +4,7 @@ export interface TabNode {
     tabId: number,
     value: string
 }
+
 export interface GoNodesAndNews {
     goNodesResp: AxiosResponse<Array<string>>,
     newsResp: AxiosResponse<Array<string>>

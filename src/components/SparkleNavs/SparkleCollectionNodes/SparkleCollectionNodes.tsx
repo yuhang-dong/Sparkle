@@ -41,6 +41,8 @@ function SparkleCollectionNodes() {
                     } else {
                         target.parentNode?.insertBefore(dragging, target);
                     }
+                    target.setAttribute("data-index", draggingIndex);
+                    dragging.setAttribute("data-index", targetIndex);
                 }
 
             }

@@ -110,6 +110,7 @@ class SparkleNews extends React.Component<DefaultProps, any> {
         this.setState({
             news:[],
             gos:[],
+            currentTabId: tabId
         })
         this.getData(tabId).then(data => {
             if(data.goNodesResp.status === 200) {
@@ -124,21 +125,18 @@ class SparkleNews extends React.Component<DefaultProps, any> {
                 })
             }
 
-            this.setState({
-                currentTabId: tabId
-            }, () => {
-                NProgress.done();
-            })
+            NProgress.done();
         })
 
     }
 
     async getData(tabId: string | number): Promise<GoNodesAndNews> {
-        let goNodesResp = await getGoNodes(tabId);
-        let newsResp = await getNews(tabId);
+        // let goNodesResp = await getGoNodes(tabId);
+        // let newsResp = await getNews(tabId);
+        let ans = await Promise.all([getGoNodes(tabId), getNews(tabId)])
         return {
-            goNodesResp,
-            newsResp
+            goNodesResp: ans[0],
+            newsResp: ans[1]
         }
 
     }
