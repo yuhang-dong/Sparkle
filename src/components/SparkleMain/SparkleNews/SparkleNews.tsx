@@ -131,8 +131,6 @@ class SparkleNews extends React.Component<DefaultProps, any> {
     }
 
     async getData(tabId: string | number): Promise<GoNodesAndNews> {
-        // let goNodesResp = await getGoNodes(tabId);
-        // let newsResp = await getNews(tabId);
         let ans = await Promise.all([getGoNodes(tabId), getNews(tabId)])
         return {
             goNodesResp: ans[0],

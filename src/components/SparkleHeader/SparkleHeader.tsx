@@ -25,7 +25,7 @@ function SparkleHeader() {
         </>
         :
         <>
-            <span><Link to={`/user/${user.userId}`}>{user.userName}</Link></span>
+            <span><Link to={`/user/${user._id}`}>{user.username}</Link></span>
             <span><button onClick={logout}>退出</button></span>
         </>
     return <header>

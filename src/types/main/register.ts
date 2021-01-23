@@ -1,3 +1,5 @@
+import {UserDetail} from "../../components/SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice";
+
 export interface RegisterReq {
     username: string,
     password: string,
@@ -5,5 +7,4 @@ export interface RegisterReq {
     confirm: string
 }
 
-export interface RegisterRespData {
-}
+export type RegisterRes = UserDetail;

@@ -25,6 +25,8 @@ const SparkleLogin = () => {
                 localStorage.setItem("user", JSON.stringify(resp.data.data));
             }
             history.push('/');
+        } else {
+            message.error("用户名或密码错误");
         }
 
     }
@@ -40,10 +42,10 @@ const SparkleLogin = () => {
                 wrapperCol={{ span: 14 }}
             >
                 <Form.Item
-                    name="username"
-                    rules={[{required: true, message: 'Please input your Username!'}]}
+                    name="email"
+                    rules={[{required: true, message: 'Please input your email!'}]}
                 >
-                    <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Username"/>
+                    <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="Email"/>
                 </Form.Item>
                 <Form.Item
                     name="password"

@@ -3,7 +3,7 @@ import {TabNode, GoNode, NewNode} from "../../types/main/mainPage";
 import {RankList} from '../../types/navs/rankList'
 import {Resp} from "../../types/base/HTTP";
 import {LoginRespData} from "../../types/main/login";
-import {RegisterRespData} from "../../types/main/register";
+import {RegisterRes} from "../../types/main/register";
 import {Node} from "../../types/navs/nodes";
 
 Mock.setup({
@@ -105,8 +105,8 @@ Mock.mock(/\/api\/v\d+\/user\/login/, 'post', () => {
     let ans: Resp<LoginRespData> = {
         code: 200,
         data:{
-            userId: '123212232',
-            userName: 'Nike',
+            _id: '123212232',
+            username: 'Nike',
             nodeCollectionSize: 123123,
             specialFollowSize: 111,
             topicCollectionSize: 192283
@@ -118,9 +118,15 @@ Mock.mock(/\/api\/v\d+\/user\/login/, 'post', () => {
 
 // 注册
 Mock.mock(/\/api\/v\d+\/user\/register/, 'post', () => {
-    let ans: Resp<RegisterRespData> = {
+    let ans: Resp<RegisterRes> = {
         code: 200,
-        data:{}
+        data:{
+            _id: '123212232',
+            username: 'Nike',
+            nodeCollectionSize: 123123,
+            specialFollowSize: 111,
+            topicCollectionSize: 192283
+        }
     }
 
     return ans;

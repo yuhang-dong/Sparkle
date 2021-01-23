@@ -8,7 +8,7 @@ import SparkleAskLogin from './SparkleAskLogin/SparkleAskLogin';
 function SparkleUserDetailOrLogin(props: DefaultProps) {
     const userDetail = useSelector(selectUser);
 
-    const view = userDetail.userId ? <SparkleUserDetail className={props.className}/> : <SparkleAskLogin className={props.className}/>;
+    const view = userDetail._id ? <SparkleUserDetail className={props.className}/> : <SparkleAskLogin className={props.className}/>;
 
     return view
 }

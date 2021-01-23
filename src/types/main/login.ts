@@ -1,7 +1,7 @@
 import {UserDetail} from "../../components/SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice";
 
 export interface LoginReq {
-    username: string,
+    email: string,
     password: string,
     remember?: boolean
 }

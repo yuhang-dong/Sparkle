@@ -2,10 +2,10 @@ import {createSlice, PayloadAction, SliceCaseReducers} from "@reduxjs/toolkit";
 import {Store} from "../../../store/store";
 
 export interface UserDetail {
-    userId: string | null,
+    _id: string | null,
     token?: string,
-    userName?: string,
-    userEmail?: string,
+    username?: string,
+    email?: string,
     nodeCollectionSize?: number,
     topicCollectionSize?: number,
     specialFollowSize?: number,
@@ -26,7 +26,7 @@ export const userDetailSlice = createSlice<{ user: UserDetail }, SliceCaseReduce
 
         removeUser: (state, action) => {
             state.user = {
-                userId: null,
+                _id: null,
             };
         }
     }
@@ -39,6 +39,6 @@ export const selectUser = (state: Store) => {
 }
 
 export const isLogin = (user: UserDetail) => {
-    return user && user.userId;
+    return user && user._id;
 }
 export default userDetailSlice.reducer

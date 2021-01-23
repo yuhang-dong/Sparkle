@@ -1,9 +1,10 @@
 import {getTabs, getGoNodes, getNews} from "./news";
 import {getRankList} from "./nav/rank";
-import {doRegister} from "./user/register";
+import {doRegister, doUniqueEmail} from "./user/register";
 import {doLogin} from "./user/login";
 import axios from 'axios';
 import {message} from "antd";
+axios.defaults.baseURL = "http://localhost:3005";
 axios.defaults.withCredentials = true; // 允许携带cookie
 axios.interceptors.response.use((resp) => {
     return resp;
@@ -15,5 +16,5 @@ axios.interceptors.response.use((resp) => {
 
 
 export {
-    getTabs, getGoNodes, getNews, getRankList, doRegister, doLogin
+    getTabs, getGoNodes, getNews, getRankList, doRegister, doLogin, doUniqueEmail
 }

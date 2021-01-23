@@ -12,22 +12,22 @@ function SparkleUserDetail(props: DefaultProps) {
     return <SparkleCard className={props.className + ` ${style.ud}`}>
         <div className={style.head}>
             <img src={logo} alt=""/>
-            <span>{userDetail.userName}</span>
+            <span>{userDetail.username}</span>
             {/*    todo: 夜间模式*/}
         </div>
         <div className={style.middle}>
             <div className={style.block}>
-                <span>{userDetail.nodeCollectionSize}</span>
+                <span>{userDetail.nodeCollectionSize ?? 0}</span>
                 <span>节点收藏</span>
             </div>
 
             <div className={style.block}>
-                <span>{userDetail.topicCollectionSize}</span>
+                <span>{userDetail.topicCollectionSize ?? 0}</span>
                 <span>节点收藏</span>
             </div>
 
             <div className={style.block}>
-                <span>{userDetail.specialFollowSize}</span>
+                <span>{userDetail.specialFollowSize ?? 0}</span>
                 <span>特别关注</span>
             </div>
         </div>

@@ -8,10 +8,13 @@ import 'codemirror/mode/markdown/markdown';
 import SparkleMarkdownRender from "../SparkleMarkdownRender/SparkleMarkdownRender";
 import _ from 'lodash';
 
-class SparkleMarkdownEditor extends React.Component<any, any>{
+export interface SparkleMarkdownEditorProps extends DefaultProps {
+    change:(content:string)=>void;
+}
+class SparkleMarkdownEditor extends React.Component<SparkleMarkdownEditorProps, any>{
     private readonly codeMirrorRef: React.RefObject<HTMLDivElement>;
     private editor?: CodeMirror.Editor;
-    constructor(props: DefaultProps) {
+    constructor(props: SparkleMarkdownEditorProps) {
         super(props);
         this.state = {
             content: ''
@@ -40,13 +43,14 @@ class SparkleMarkdownEditor extends React.Component<any, any>{
             mode: "markdown",
             lineNumbers: true
         });
-
+        const throttleRender = _.throttle((doit) => {
+            doit();
+        }, 1000);
         this.editor.on("change", (instance, changeObj) => {
             // 节流进行实时渲染
-
-            _.throttle(() => {
-                this.setState({content: instance.getDoc().getValue()})
-            }, 1000)();
+            const content = instance.getDoc().getValue();
+            throttleRender(() => this.setState({content}));
+            this.props.change(content);
         });
     }
 
