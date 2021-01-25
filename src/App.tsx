@@ -9,7 +9,7 @@ import 'nprogress/nprogress.css'
 
 
 function App() {
-    return (<Router>
+    return (<Router basename="/Sparkle">
             <SparkleHeader/>
             <SparkleMain/>
             <SparkleFooter/>
