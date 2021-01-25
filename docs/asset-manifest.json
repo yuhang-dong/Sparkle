@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Sparkle/static/css/main.204a1885.chunk.css",
-    "main.js": "/Sparkle/static/js/main.8c64f872.chunk.js",
-    "main.js.map": "/Sparkle/static/js/main.8c64f872.chunk.js.map",
+    "main.js": "/Sparkle/static/js/main.138975ff.chunk.js",
+    "main.js.map": "/Sparkle/static/js/main.138975ff.chunk.js.map",
     "runtime-main.js": "/Sparkle/static/js/runtime-main.fc20edea.js",
     "runtime-main.js.map": "/Sparkle/static/js/runtime-main.fc20edea.js.map",
     "static/css/2.d5d41060.chunk.css": "/Sparkle/static/css/2.d5d41060.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.d5d41060.chunk.css",
     "static/js/2.d94846cb.chunk.js",
     "static/css/main.204a1885.chunk.css",
-    "static/js/main.8c64f872.chunk.js"
+    "static/js/main.138975ff.chunk.js"
   ]
 }
