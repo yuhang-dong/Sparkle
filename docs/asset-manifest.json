@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Sparkle/static/css/main.204a1885.chunk.css",
-    "main.js": "/Sparkle/static/js/main.138975ff.chunk.js",
-    "main.js.map": "/Sparkle/static/js/main.138975ff.chunk.js.map",
+    "main.js": "/Sparkle/static/js/main.71001ab9.chunk.js",
+    "main.js.map": "/Sparkle/static/js/main.71001ab9.chunk.js.map",
     "runtime-main.js": "/Sparkle/static/js/runtime-main.fc20edea.js",
     "runtime-main.js.map": "/Sparkle/static/js/runtime-main.fc20edea.js.map",
     "static/css/2.d5d41060.chunk.css": "/Sparkle/static/css/2.d5d41060.chunk.css",
-    "static/js/2.d94846cb.chunk.js": "/Sparkle/static/js/2.d94846cb.chunk.js",
-    "static/js/2.d94846cb.chunk.js.map": "/Sparkle/static/js/2.d94846cb.chunk.js.map",
+    "static/js/2.3ea41de9.chunk.js": "/Sparkle/static/js/2.3ea41de9.chunk.js",
+    "static/js/2.3ea41de9.chunk.js.map": "/Sparkle/static/js/2.3ea41de9.chunk.js.map",
     "static/js/3.10bb44fa.chunk.js": "/Sparkle/static/js/3.10bb44fa.chunk.js",
     "static/js/3.10bb44fa.chunk.js.map": "/Sparkle/static/js/3.10bb44fa.chunk.js.map",
     "index.html": "/Sparkle/index.html",
     "static/css/2.d5d41060.chunk.css.map": "/Sparkle/static/css/2.d5d41060.chunk.css.map",
     "static/css/main.204a1885.chunk.css.map": "/Sparkle/static/css/main.204a1885.chunk.css.map",
-    "static/js/2.d94846cb.chunk.js.LICENSE.txt": "/Sparkle/static/js/2.d94846cb.chunk.js.LICENSE.txt",
+    "static/js/2.3ea41de9.chunk.js.LICENSE.txt": "/Sparkle/static/js/2.3ea41de9.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/Sparkle/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fc20edea.js",
     "static/css/2.d5d41060.chunk.css",
-    "static/js/2.d94846cb.chunk.js",
+    "static/js/2.3ea41de9.chunk.js",
     "static/css/main.204a1885.chunk.css",
-    "static/js/main.138975ff.chunk.js"
+    "static/js/main.71001ab9.chunk.js"
   ]
 }
