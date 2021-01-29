@@ -21,7 +21,9 @@ function SparkleMarkdownRender(props: MarkdownRenderProps) {
             return ''; // 使用额外的默认转义
         }
     });
-    return <div dangerouslySetInnerHTML={{__html: md.render(props.content)}}/>
+
+    const ht = md.render(props.content);
+    return <div dangerouslySetInnerHTML={{__html: ht}}/>
 }
 
 export default SparkleMarkdownRender;

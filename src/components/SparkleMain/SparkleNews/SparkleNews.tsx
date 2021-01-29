@@ -38,7 +38,7 @@ class SparkleNews extends React.Component<DefaultProps, any> {
             gos = <Skeleton paragraph={false} active/>
         } else {
             gos = this.state.gos.map((go, index) => {
-                return <a href={go.url} key={index}><span>{go.value}</span></a>
+                return <Link to={go.url} key={index}><span>{go.value}</span></Link>
             })
         }
 

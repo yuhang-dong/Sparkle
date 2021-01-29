@@ -19,7 +19,6 @@ function SparkleCreate() {
 
     function onContentChange(content: string) {
         setContent(content);
-        console.log(content);
     }
 
     function onTopicChange(value: SelectValue){
