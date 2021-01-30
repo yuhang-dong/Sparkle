@@ -1,14 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Button, Form, Input, message, Tooltip,} from 'antd';
 import {QuestionCircleOutlined} from '@ant-design/icons';
 import './SparkleRegister.scss';
 import {doRegister, doUniqueEmail} from "../../../apis";
 import {RegisterReq} from "../../../types/main/register";
 import SparkleCard from "../../helper/SparkleCard/SparkleCard";
-import {setUser} from "../../SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice";
-import {useDispatch} from "react-redux";
 import {useHistory} from "react-router-dom";
 import _ from 'lodash';
+import {AllContext} from "../../../store/store";
 
 
 const formItemLayout = {
@@ -36,14 +35,15 @@ const SparkleRegister = () => {
     const [form] = Form.useForm();
 
     const history = useHistory();
-    const dispatch = useDispatch();
+    const {user, userDispatch} = useContext(AllContext);
     async function onRegister(user: RegisterReq) {
         let resp = await doRegister(user);
 
         if(resp.data.code === 200) {
             message.success("注册成功");
 
-            dispatch(setUser(resp.data.data));
+            userDispatch({type: 'setUser', payload: resp.data.data});
+            document.addEventListener('focus', ()=>{})
             history.push('/');
         } else {
             message.error("注册失败，检查邮箱、密码、用户名是否满足规范");

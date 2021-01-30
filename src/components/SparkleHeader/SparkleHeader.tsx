@@ -1,24 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {SearchOutlined} from '@ant-design/icons'
 import {Input} from 'antd'
 import {Link} from 'react-router-dom'
 import './SparkleHeader.scss'
-import {useDispatch, useSelector} from "react-redux";
-import {isLogin, selectUser} from "../SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice";
-import {removeUser} from '../SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice';
-
+import {AllContext, UserDetail} from "../../store/store";
 function SparkleHeader() {
-
-    const dispatch = useDispatch();
-
+    const {user, userDispatch} = useContext(AllContext);
     function logout(e: React.MouseEvent) {
         e.preventDefault();
         localStorage.removeItem("user");
-        dispatch(removeUser(null));
-    }
 
-    const user = useSelector(selectUser);
-    const operator = !isLogin(user) ?
+        userDispatch({type:"removeUser", payload: {} as UserDetail})
+    }
+    const operator = !(user._id) ?
         <>
             <span><Link to="/register">注册</Link></span>
             <span><Link to="/login">登录</Link></span>

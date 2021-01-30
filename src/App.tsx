@@ -6,14 +6,23 @@ import './App.css';
 import React from "react";
 import './apis/mock'
 import 'nprogress/nprogress.css'
-
+import Provider from "./store/store";
+if(navigator?.userAgent?.toLowerCase().indexOf("firefox") > -1) {
+    document.body.ondrop = function(event: DragEvent): void {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+}
 
 function App() {
-    return (<Router>
+    return (
+        <Provider>
+        <Router>
             <SparkleHeader/>
             <SparkleMain/>
             <SparkleFooter/>
             </Router>
+        </Provider>
     );
 }
 

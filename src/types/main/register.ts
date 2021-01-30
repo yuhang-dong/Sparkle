@@ -1,4 +1,4 @@
-import {UserDetail} from "../../components/SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice";
+import {UserDetail} from "../../store/store";
 
 export interface RegisterReq {
     username: string,

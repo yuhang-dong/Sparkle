@@ -1,25 +1,24 @@
 import {Form, Input, Button, Checkbox, message} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
-import React from "react";
+import React, {useContext} from "react";
 import {LoginReq} from "../../../types/main/login";
 import {doLogin} from "../../../apis";
 import {useHistory} from 'react-router-dom';
 import SparkleCard from "../../helper/SparkleCard/SparkleCard";
-import {useDispatch} from "react-redux";
-import {setUser} from '../../SparkleNavs/SparkleUserDetailOrLogin/SparkleUserDeatilSlice';
 import './SparkleLogin.scss';
+import {AllContext} from "../../../store/store";
 
 const SparkleLogin = () => {
     const [form] = Form.useForm();
     const history = useHistory();
-    const dispatch = useDispatch();
+    const {user, userDispatch} = useContext(AllContext);
     async function onLogin(values: LoginReq) {
         //  登录
         let resp = await doLogin(values);
         if(resp.data.code === 200) {
             message.success("登录成功！");
             // 记录登陆成功
-            dispatch(setUser(resp.data.data));
+            userDispatch({type: 'setUser', payload: resp.data.data});
             if(values.remember) {
                 // 本地记录登录信息，下次访问页面时自动登录
                 localStorage.setItem("user", JSON.stringify(resp.data.data));

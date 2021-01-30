@@ -1,14 +1,13 @@
-import {useSelector} from "react-redux";
-import {selectUser} from "./SparkleUserDeatilSlice";
 import {DefaultProps} from "../../../types/framework";
 import SparkleUserDetail from "./SparkleUserDetail/SparkleUserDetail";
-import React from "react";
+import React, {useContext} from "react";
 import SparkleAskLogin from './SparkleAskLogin/SparkleAskLogin';
+import {AllContext} from "../../../store/store";
 
 function SparkleUserDetailOrLogin(props: DefaultProps) {
-    const userDetail = useSelector(selectUser);
+    const {user} = useContext(AllContext);
 
-    const view = userDetail._id ? <SparkleUserDetail className={props.className}/> : <SparkleAskLogin className={props.className}/>;
+    const view = user._id ? <SparkleUserDetail className={props.className}/> : <SparkleAskLogin className={props.className}/>;
 
     return view
 }

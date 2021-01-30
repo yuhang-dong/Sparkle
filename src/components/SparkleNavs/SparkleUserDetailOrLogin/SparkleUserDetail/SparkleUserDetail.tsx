@@ -1,14 +1,14 @@
-import {useSelector} from "react-redux";
-import {selectUser} from "../SparkleUserDeatilSlice";
 import {FileTextOutlined} from '@ant-design/icons'
 import logo from '../../../../logo.svg'
 import {DefaultProps} from "../../../../types/framework";
 import style from './SparkleUserDetail.module.scss'
 import SparkleCard from "../../../helper/SparkleCard/SparkleCard";
 import {Link} from "react-router-dom";
+import {useContext} from "react";
+import {AllContext} from "../../../../store/store";
 
 function SparkleUserDetail(props: DefaultProps) {
-    const userDetail = useSelector(selectUser);
+    const {user: userDetail} = useContext(AllContext);
     return <SparkleCard className={props.className + ` ${style.ud}`}>
         <div className={style.head}>
             <img src={logo} alt=""/>
