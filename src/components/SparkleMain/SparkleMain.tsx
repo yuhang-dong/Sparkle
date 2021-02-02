@@ -18,25 +18,21 @@ class SparkleMain extends React.Component {
             <div className="container">
                 <div className="main_wrapper">
                     <div className="middle">
+                        <SparkleScrollToTop />
                         <Switch>
                             <Route path='/login' >
-                                <SparkleScrollToTop />
                                 <SparkleLogin/>
                             </Route>
                             <Route path="/register">
-                                <SparkleScrollToTop />
                                 <SparkleRegister/>
                             </Route>
                             <Route path="/article/:articleId">
-                                <SparkleScrollToTop />
                                 <SparkleArticle/>
                             </Route>
                             <Route path="/create">
-                                <SparkleScrollToTop />
                                 <SparkleCreate/>
                             </Route>
                             <Route path="/">
-                                <SparkleScrollToTop />
                                 <SparkleIndex/>
                             </Route>
                         </Switch>
