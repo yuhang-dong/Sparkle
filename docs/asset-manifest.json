@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Sparkle/static/css/main.204a1885.chunk.css",
-    "main.js": "/Sparkle/static/js/main.bbf55c27.chunk.js",
-    "main.js.map": "/Sparkle/static/js/main.bbf55c27.chunk.js.map",
-    "runtime-main.js": "/Sparkle/static/js/runtime-main.fc20edea.js",
-    "runtime-main.js.map": "/Sparkle/static/js/runtime-main.fc20edea.js.map",
+    "main.css": "/Sparkle/static/css/main.a5e89d83.chunk.css",
+    "main.js": "/Sparkle/static/js/main.95d04048.chunk.js",
+    "main.js.map": "/Sparkle/static/js/main.95d04048.chunk.js.map",
+    "runtime-main.js": "/Sparkle/static/js/runtime-main.6df4cc77.js",
+    "runtime-main.js.map": "/Sparkle/static/js/runtime-main.6df4cc77.js.map",
     "static/css/2.d5d41060.chunk.css": "/Sparkle/static/css/2.d5d41060.chunk.css",
-    "static/js/2.8c772029.chunk.js": "/Sparkle/static/js/2.8c772029.chunk.js",
-    "static/js/2.8c772029.chunk.js.map": "/Sparkle/static/js/2.8c772029.chunk.js.map",
-    "static/js/3.10bb44fa.chunk.js": "/Sparkle/static/js/3.10bb44fa.chunk.js",
-    "static/js/3.10bb44fa.chunk.js.map": "/Sparkle/static/js/3.10bb44fa.chunk.js.map",
+    "static/js/2.246230c1.chunk.js": "/Sparkle/static/js/2.246230c1.chunk.js",
+    "static/js/2.246230c1.chunk.js.map": "/Sparkle/static/js/2.246230c1.chunk.js.map",
+    "static/js/3.7737cb61.chunk.js": "/Sparkle/static/js/3.7737cb61.chunk.js",
+    "static/js/3.7737cb61.chunk.js.map": "/Sparkle/static/js/3.7737cb61.chunk.js.map",
     "index.html": "/Sparkle/index.html",
     "static/css/2.d5d41060.chunk.css.map": "/Sparkle/static/css/2.d5d41060.chunk.css.map",
-    "static/css/main.204a1885.chunk.css.map": "/Sparkle/static/css/main.204a1885.chunk.css.map",
-    "static/js/2.8c772029.chunk.js.LICENSE.txt": "/Sparkle/static/js/2.8c772029.chunk.js.LICENSE.txt",
+    "static/css/main.a5e89d83.chunk.css.map": "/Sparkle/static/css/main.a5e89d83.chunk.css.map",
+    "static/js/2.246230c1.chunk.js.LICENSE.txt": "/Sparkle/static/js/2.246230c1.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/Sparkle/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc20edea.js",
+    "static/js/runtime-main.6df4cc77.js",
     "static/css/2.d5d41060.chunk.css",
-    "static/js/2.8c772029.chunk.js",
-    "static/css/main.204a1885.chunk.css",
-    "static/js/main.bbf55c27.chunk.js"
+    "static/js/2.246230c1.chunk.js",
+    "static/css/main.a5e89d83.chunk.css",
+    "static/js/main.95d04048.chunk.js"
   ]
 }
